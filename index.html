@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>POCCAT</title>
-
-    /*字型 sans-serif*/
-    <body> {
-    font-family: sans-serif;
-    }
     <style>
+        /*字型 sans-serif*/
+        body {
+            font-family: sans-serif;
+        }
+
         /*容器 box 高度100vh flex排版方向column 水平置中 不要垂直置中*/
         .container {
             height: 100vh;
@@ -18,56 +18,42 @@
             align-items: center;
             background-color: #bdaa90;
         }
-            .title {
-                width: 80%;
-                margin-top: 2em;
-            }
-             .cat-img {
+
+        .title {
+            width: 80%;
+            margin-top: 2em;
+            max-width: 1000px;
+        }
+
+        .cat-img {
+            flex: 5;
             width: 100%;
         }
-        #p{
+
+        #p {
             background-image: url('imgs/p.png');
             background-position: bottom;
             background-size: contain;
             background-repeat: no-repeat;
             text-align: center;
             color: white;
-            font-size: 80px;
-            -webkit-text-stroke: 3px black;
+            font-size: 1000px;
+            -webkit-text-stroke: 15px black;
+            max-width: 1800px;
+            user-select: none;
         }
-        #p{
-            background-image: url('imgs/p.png');
-            background-position: bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+
         body {
             margin: 0;
             padding: 0;
         }
-        .cat-img{
-            fllex:1;
-        }
-        /*標題 box 最大寬度 600px*/
-        .title {
-            max-width: 600px;
-        }
-        #p{
-            max-width: 800px;
-        }
-        /*防止文字被選取*/
-        #p{
-        user-select: none
-        }
-
     </style>
-
 </head>
 
 <body>
 <div class="container">
     <img class="title" src="imgs/popcat.svg" alt="popcat">
     <div class="cat-img" id="p">0</div>
-
+</div>
 </body>
 </html>
